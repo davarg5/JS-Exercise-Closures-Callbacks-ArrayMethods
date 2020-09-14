@@ -44,6 +44,9 @@ Find the file `index.js` and complete the tasks until your tests are passing.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+
+Closure is when the inner scope references a variable that was created in the outer scope. Closure can occur no matter how deeply nested a function is.
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -65,8 +68,17 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+
+Closure is used on line 57, where the function that is being returned references name, which is outside of its scope, in the console.log statement, which was defined inside of personalDice.
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+
+
+
 c. What is the lexical scope of `newRoll`? 
+
+
+
 
 ### Task 3 - Stretch Goals
 

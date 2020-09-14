@@ -81,7 +81,7 @@ finalScore(inning, 9) might return:
 
 */ 
 
-function finalScore(callback, num)
+function finalScore(inning, num)
 {
   let homeScore = 0;
   let awayScore = 0;
@@ -117,8 +117,60 @@ and returns the score at each pont in the game, like so:
 
 Final Score: awayTeam - homeTeam */
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function getInningScore(home, away)
+{
+  return away+" - "+home;
 }
 
+function scoreboard(getInningScore, inning, num) 
+{
+  let scores = "";
+  let home = 0;
+  let away = 0;
+  for(let i=0; i<num; i++)
+  {
+    home += inning();
+    away += inning();
+    if(i===0)
+    {
+      score+="1st inning: "+getInningScore(away,home);
+    }
+    if(i===1)
+    {
+      score+="\n2nd inning: "+getInningScore(away,home);
+    }
+    if(i===2)
+    {
+      score+="\n3rd inning: "+getInningScore(away,home);
+    }
+    if(i===3)
+    {
+      score+="\n4th inning: "+getInningScore(away,home);
+    }
+    if(i===4)
+    {
+      score+="\n5th inning: "+getInningScore(away,home);
+    }
+    if(i===5)
+    {
+      score+="\n6th inning: "+getInningScore(away,home);
+    }
+    if(i===6)
+    {
+      score+="\n7th inning: "+getInningScore(away,home);
+    }
+    if(i===7)
+    {
+      score+="\n8th inning: "+getInningScore(away,home);
+    }
+    if(i===8)
+    {
+      score+="\n9th inning: "+getInningScore(away,home);
+    }
+  }
+  scores += "\n\nFinal Score "+getInningScore(away,home);
+  return scores;
+}
+
+console.log(scoreboard(getInningScore,inning,9));
 
