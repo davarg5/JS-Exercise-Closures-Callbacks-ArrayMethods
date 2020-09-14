@@ -36,7 +36,7 @@ function processFirstItem(stringList, callback) {
  * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
  * 
- * counter1 would be preferable when
+ * counter1 would be preferable when you want to create multiple instances of counters that you want to use. counter2 would be preferable when you simply want to increment a certain count variable.
  *
 */
 
