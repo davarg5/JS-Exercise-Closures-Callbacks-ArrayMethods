@@ -73,11 +73,11 @@ Closure is used on line 57, where the function that is being returned references
 
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
 
-
+The similarity between the first and second time that dansRoll is called is that both times the function will run and a random number will be rolled. The difference is that the number rolled could differ when called the first and second time.
 
 c. What is the lexical scope of `newRoll`? 
 
-
+The lexical scope of newRoll is within the function that is nested inside personalDice.
 
 
 ### Task 3 - Stretch Goals
