@@ -28,9 +28,15 @@ function processFirstItem(stringList, callback) {
  * 
  * 1. What is the difference between counter1 and counter2?
  * 
+ * counter1 is a function that stays within its own scope (only uses a variable that was declared in the function) and returns a function, while counter2 uses a closure, referencing a variable from the global scope, incrementing the variable, and does not include a return statement.
+ * 
  * 2. Which of the two uses a closure? How can you tell?
  * 
+ * counter2 uses a closure because it reaches out and references a variable from outside its function scope (references a variable from the global scope).
+ * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
+ * 
+ * 
  *
 */
 
@@ -56,10 +62,9 @@ function counter2() {
 
 Write a function called `inning` that generates a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
 
-function inning(/*Code Here*/){
-
-    /*Code Here*/
-
+function inning()
+{
+  return Math.floor(Math.random()*3);
 }
 
 /* Task 3: finalScore()
@@ -76,11 +81,19 @@ finalScore(inning, 9) might return:
 
 */ 
 
-function finalScore(/*code Here*/){
-
-  /*Code Here*/
-
+function finalScore(callback, num)
+{
+  let homeScore = 0;
+  let awayScore = 0;
+  for(let i=0; i<num; i++)
+  {
+    homeScore += inning();
+    awayScore += inning();
+  }
+  return `Home: ${homeScore}\nAway: ${awayScore}`;
 }
+
+console.log(finalScore(inning, 9));
 
 /* Task 4: 
 
