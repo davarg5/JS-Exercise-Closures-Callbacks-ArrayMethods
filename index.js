@@ -124,7 +124,7 @@ function getInningScore(home, away)
 
 function scoreboard(getInningScore, inning, num) 
 {
-  let scores = "";
+  let score = "";
   let home = 0;
   let away = 0;
   for(let i=0; i<num; i++)
@@ -168,8 +168,8 @@ function scoreboard(getInningScore, inning, num)
       score+="\n9th inning: "+getInningScore(away,home);
     }
   }
-  scores += "\n\nFinal Score "+getInningScore(away,home);
-  return scores;
+  score += "\n\nFinal Score "+getInningScore(away,home);
+  return score;
 }
 
 console.log(scoreboard(getInningScore,inning,9));
